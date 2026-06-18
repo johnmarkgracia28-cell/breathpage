@@ -285,6 +285,9 @@ Examples:
 - output/total-homes-modern.html
 - output/total-homes-friendly.html
 - output/total-homes-stylish.html
+- output/total-homes-grit.html
+- output/total-homes-zenith.html
+- output/total-homes-impact.html
 
 ---
 
