@@ -35,10 +35,15 @@ Reference style: Total Homes case study (6 variants).
 ## Style Variants
 
 ### modern
-- Hero image: diagonal clip (clip-path parallelogram, skewX -8deg)
-- Accent: thin vertical diagonal line between content and image
+- Hero image: diagonal parallelogram clip (right side)
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)
+- Hero image also used as blurred background (full canvas, dark overlay on top)
+- Thin vertical diagonal accent line: left edge of hero image
+  4px wide, full height, skewX -8deg, color [ACCENT], opacity 0.75
+- Full width horizontal bar: bottom of canvas
+  height 8px, color [ACCENT], z-index 5
 - Border radius: 0px
-- Headline size: 54px, weight 900
+- Headline size: 54px, weight 900, color white
 
 ### friendly
 - Hero image: rounded corners (border-radius 24px), positioned top-right with padding
@@ -173,7 +178,11 @@ function imageToBase64(filePath) {
 
 ### modern
 ```html
+<!-- Vertical diagonal accent line -->
 <div style="position:absolute; top:0; right:42%; width:4px; height:100%; background:[ACCENT]; transform:skewX(-8deg); opacity:0.75; z-index:3;"></div>
+
+<!-- Bottom horizontal gold bar -->
+<div style="position:absolute; bottom:0; left:0; width:100%; height:8px; background:[ACCENT]; z-index:5;"></div>
 ```
 
 ### friendly
